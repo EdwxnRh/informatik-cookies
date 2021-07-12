@@ -12,7 +12,7 @@ import {
   SlideFade,
 } from '@chakra-ui/react';
 import { useState } from 'react';
-import { Link as ReachLink } from '@reach/router';
+import { Link as ReachLink, navigate } from '@reach/router';
 
 export default function Pishing() {
   const [timeout, setTime] = useState(false);
@@ -26,42 +26,39 @@ export default function Pishing() {
   const [fade7, setFade7] = useState(false);
   const [fade8, setFade8] = useState(false);
 
-  setTimeout(() => {
-    setTime(true);
-  }, 3000);
-  setTimeout(() => {
-    setFade(true);
+  if (process.browser) {
     setTimeout(() => {
-      setFade1(true);
-    }, 1200);
-    setTimeout(() => {
-      setFade2(true);
-    }, 1800);
-    setTimeout(() => {
-      setFade3(true);
-      window.scrollTo(0, 200);
-    }, 2200);
-    setTimeout(() => {
-      setFade4(true);
-      window.scrollTo(0, 300);
-    }, 2500);
-    setTimeout(() => {
-      setFade5(true);
-      window.scrollTo(0, 400);
-    }, 2800);
-    setTimeout(() => {
-      setFade6(true);
-      window.scrollTo(0, 500);
+      setTime(true);
     }, 3000);
     setTimeout(() => {
-      setFade7(true);
-      window.scrollTo(0, 600);
-    }, 3200);
-    setTimeout(() => {
-      setFade8(true);
-      window.scrollTo(0, 1000);
-    }, 3300);
-  }, 3500);
+      setFade(true);
+      setTimeout(() => {
+        setFade1(true);
+      }, 1200);
+      setTimeout(() => {
+        setFade2(true);
+      }, 1800);
+      setTimeout(() => {
+        setFade3(true);
+      }, 2200);
+      setTimeout(() => {
+        setFade4(true);
+      }, 2500);
+      setTimeout(() => {
+        setFade5(true);
+      }, 2800);
+      setTimeout(() => {
+        setFade6(true);
+        document.querySelector('#sl3').scrollIntoView();
+      }, 3000);
+      setTimeout(() => {
+        setFade7(true);
+      }, 3200);
+      setTimeout(() => {
+        setFade8(true);
+      }, 3300);
+    }, 3500);
+  }
 
   return (
     <>
@@ -111,7 +108,7 @@ export default function Pishing() {
                   </Stat>
                 </Box>
               </SlideFade>
-              <SlideFade in={fade3} offsetY='30px'>
+              <SlideFade in={fade3} offsetY='30px' id='sl1'>
                 <Box width='xl' p='4' borderWidth='1px' rounded='md' mt='6'>
                   <Stat>
                     <StatLabel>NEUE ABBUCHUNG</StatLabel>
@@ -122,7 +119,7 @@ export default function Pishing() {
                   </Stat>
                 </Box>
               </SlideFade>
-              <SlideFade in={fade4} offsetY='30px'>
+              <SlideFade in={fade4} offsetY='30px' id='sl2'>
                 <Box width='xl' p='4' borderWidth='1px' rounded='md' mt='6'>
                   <Stat>
                     <StatLabel>NEUE ABBUCHUNG</StatLabel>
@@ -133,7 +130,7 @@ export default function Pishing() {
                   </Stat>
                 </Box>
               </SlideFade>
-              <SlideFade in={fade5} offsetY='30px'>
+              <SlideFade in={fade5} offsetY='30px' id='sl3'>
                 <Box width='xl' p='4' borderWidth='1px' rounded='md' mt='6'>
                   <Stat>
                     <StatLabel>NEUE ABBUCHUNG</StatLabel>
@@ -144,7 +141,7 @@ export default function Pishing() {
                   </Stat>
                 </Box>
               </SlideFade>
-              <SlideFade in={fade6} offsetY='30px'>
+              <SlideFade in={fade6} offsetY='30px' id='sl4'>
                 <Box width='xl' p='4' borderWidth='1px' rounded='md' mt='6'>
                   <Stat>
                     <StatLabel>NEUE ABBUCHUNG</StatLabel>
@@ -155,7 +152,7 @@ export default function Pishing() {
                   </Stat>
                 </Box>
               </SlideFade>
-              <SlideFade in={fade7} offsetY='30px'>
+              <SlideFade in={fade7} offsetY='30px' id='sl5'>
                 <Box width='xl' p='4' borderWidth='1px' rounded='md' mt='6'>
                   <Stat>
                     <StatLabel>NEUE ABBUCHUNG</StatLabel>
@@ -166,7 +163,7 @@ export default function Pishing() {
                   </Stat>
                 </Box>
               </SlideFade>
-              <SlideFade in={fade8} offsetY='30px'>
+              <SlideFade in={fade8} offsetY='30px' id='sl6'>
                 <Box width='xl' p='4' borderWidth='1px' rounded='md' mt='6'>
                   <Stat>
                     <StatLabel>NEUE ABBUCHUNG</StatLabel>
