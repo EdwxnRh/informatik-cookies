@@ -133,7 +133,7 @@ export default function GoodOnes() {
                 <Heading mb='3' fontSize='3xl'>
                   Beliebte Cookies
                 </Heading>
-                <Text>
+                <Text width='xl' fontSize='lg'>
                   Session Cookies sind beim Surfen besonders hilfreich und
                   unabkömmlich. Sie speichern Ihre Login-Daten, so dass Sie sich
                   auf passwort-geschützen Internetseiten nicht nach wenigen
