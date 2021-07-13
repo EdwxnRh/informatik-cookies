@@ -27,7 +27,7 @@ export default function GoodOnes() {
           <Grid placeItems='center'>
             <HStack spacing='16'>
               <Box
-                width={{ lg: 'xl', base: 'lg' }}
+                width="xl"
                 p='5'
                 borderWidth='1px'
                 rounded='md'
@@ -133,7 +133,7 @@ export default function GoodOnes() {
                 <Heading mb='3' fontSize='3xl'>
                   Beliebte Cookies
                 </Heading>
-                <Text maxW='12'>
+                <Text>
                   Session Cookies sind beim Surfen besonders hilfreich und
                   unabkömmlich. Sie speichern Ihre Login-Daten, so dass Sie sich
                   auf passwort-geschützen Internetseiten nicht nach wenigen
