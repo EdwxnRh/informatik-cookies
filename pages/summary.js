@@ -12,20 +12,23 @@ export default function Summary() {
       <Button colorScheme='gray' opacity='0'>
         Restart
       </Button>
-      <Box height='90'>
+      <Box height='90' px='5'>
         <Box id='expl' pb='32' mt='24'>
           <Grid placeItems='center'>
             <Image
               src='https://media4.giphy.com/media/3o6oziuA28BBlfpRkc/giphy.gif?cid=ecf05e47izc0oeh6wx4ss9q79m7treq78sh2nhwmnq76f89b&rid=giphy.gif&ct=g'
               rounded='xl'
-              width='xl'
+              width={{ lg: 'xl', base: 'md' }}
               height='56'
             ></Image>
             <Box mt='16'>
               <Heading mb='3' fontSize='3xl'>
                 Kurze Zusammenfassung!
               </Heading>
-              <Text width='xl' fontSize='lg'>
+              <Text
+                width={{ lg: 'xl', base: 'lg' }}
+                fontSize={{ base: '2xl', md: 'lg' }}
+              >
                 Zu der guten Seite der Cookies gehören die notwendigen und
                 Performance-Cookies, da sie für mehr Benutzerfreundlichkeit und
                 Effizienz (Bsp.: Warenkorb) sorgen. Außerdem erhöhen sie die
@@ -38,7 +41,7 @@ export default function Summary() {
                 Weiterleitung von Zugangsdaten führen.
               </Text>
               <Button
-                width='full'
+                width='md'
                 mt='6'
                 colorScheme='green'
                 as={ReachLink}
