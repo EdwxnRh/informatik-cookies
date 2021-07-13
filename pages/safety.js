@@ -31,7 +31,7 @@ export default function Safety() {
           <Box id='expl' pb='32' mt='24'>
             <Grid placeItems='center'>
               <Image
-                src='https://media4.giphy.com/media/V7boLBI7WSpEWHniGs/giphy.gif?cid=ecf05e47gju6iiamh9vi6n1q1tm9k3bx3razd3y0pjfgr4hr&rid=giphy.gif&ct=g'
+                src='./giphy.gif'
                 rounded='xl'
                 width='xl'
                 height='xl'
